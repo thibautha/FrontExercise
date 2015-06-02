@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>ColorBackground</title>
+    <style media="screen">
+
+    body{
+      margin: 0px;
+    }
+
+    .main{
+      height:100%;
+      width:100%;
+      background: linear-gradient(180deg, #2f748c, transparent), linear-gradient(45deg, #5bc88c, transparent), linear-gradient(-45deg, #0c1f25, transparent);
+      background-blend-mode: screen;
+      /* need prefixe for attribute the good keyframe to Chrome*/
+      -webkit-animation: hue 10s infinite linear;
+      -moz-animation: hueR 10s infinite linear;
+    }
+
+    html {
+      font-family: 'Roboto', sans-serif;
+      color:#FFF;
+      height: 100%;
+    }
+
+    html h1 {
+      font-size: 3rem;
+      padding: 30px 0 0 30px;
+      margin-bottom: 0;
+      position:absolute;
+      z-index:45;
+    }
+
+    /****ANIMATION***/
+
+    @-webkit-keyframes hue {
+      from {
+        -webkit-filter: hue-rotate(360deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(-360deg);
+      }
+    }
+
+    /*Only Firefox use filter whitout prefix actually*/
+    @keyframes hueR {
+      from {
+        filter: hue-rotate(360deg) ;
+      }
+      to {
+        filter: hue-rotate(-360deg) ;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>background #color </h1>
+    <div class="main"></div>
+  </body>
+</html>
