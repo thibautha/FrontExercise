@@ -1,0 +1,87 @@
+/*********************************/
+/***********Transition************/
+/*********************************/
+
+
+.container:hover .contenu{
+  margin-left:0px;
+  opacity:1;
+  transition: all .3s;
+  /*transition: opacity 2s;*/
+  /*-webkit-transition-delay: .1s;
+  transition-delay: .1s;*/
+  transition: all .3s;
+}
+.container:hover h3{
+  opacity:0;
+  transition: all .3s;
+
+}
+.container:hover h1{
+  opacity:1;
+  transition: all .3s;
+bottom:0;
+}
+.container:hover .bloc {
+  width:300px;
+}
+
+.container:hover .slide{
+width:50px;
+}
+.container:hover .slide::after{
+width:0px;
+opacity:0;
+    -webkit-animation: pulsateE .5s ease;
+animation: pulsateE .5s ease;
+}
+
+
+@keyframes pulsateE {
+    0% {
+        width:80px;
+        opacity:1;
+    }
+    25%{
+      width:50px;
+      opacity:0.7;
+
+    }
+    100%{
+      background-color: #FFF;
+
+      width:0px;
+      opacity:0;
+    }
+}
+
+/*-webkit-transition: width .2s;
+  transition: width .2s;
+  -webkit-animation-direction: reverse;
+    animation-direction: reverse;*/
+/*.bloc::before{
+  content: "Bloc Anime";
+  width:50px;
+  height:200px;
+  position: absolute;
+left: 0px;
+background-color:#EEE;
+opacity:1;
+
+}*/
+
+/*.container:hover .bloc::before{
+margin-left:-1000px;
+  transition: all 3s;
+opacity:0;
+}
+.container:hover h3{
+  opacity:0;
+  transition: all .3s;
+
+}*/
+
+/*-webkit-transition: width 0.5s;
+  transition: width 0.5s;*/
+  /*-webkit-animation-direction: reverse;
+    animation-direction: reverse;*/
