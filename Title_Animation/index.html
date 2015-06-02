@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Title Animation</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main" class="show">
+    <div id="container">
+      <a href="#" class="close button"><span>Hide</span></a>
+      <a href="#" class="open button active"><span>Show</span></a>
+    </div>
+    <div class="box-table txt">
+        <div class="box-cell show-text">
+            <h2 class="row">Titre à animer</h2>
+            <h2 class="row">Titre à animer</h2>
+            <p class="row">Lorem ipsum à animer</p>
+            <p class="row">Lorem ipsum à animer</p>
+        </div>
+    </div>
+    <div class="background-filtre"></div>
+    <div class="background-image show"></div>
+  </div>
+  <script>
+  $('.close').on('click', function(){
+    $('#main').removeClass('show');
+    $('#main').addClass('hide');
+    $('.open').removeClass('active');
+    $('.close').addClass('active');
+  });
+
+  $('.open').on('click', function(){
+    $('#main').addClass('show');
+    $('#main').removeClass('hide');
+    $('.close').removeClass('active');
+    $('.open').addClass('active');
+  });
+</script>
+</body>
+</html>
