@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Image Effect</title>
+        <meta name="description" content="">
+        <style>
+body{
+
+}
+.wrapper{
+  background: url("test01.jpg") no-repeat fixed;
+  /*background-color: #FF0;*/
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 480px;
+}
+
+.section {
+  background-size: cover;
+  margin-left: -160px;
+  margin-top:-100px;
+  position: absolute;
+  height: 44px;
+  width: 640px;
+  overflow: hidden;
+  -moz-transform: skew(0deg, 20deg);
+  -ms-transform: skew(-0deg, 20deg);
+  -webkit-transform: skew(-0deg, 20deg);
+  transform: skew(-0deg, 20deg);
+  animation: upNdown 3s infinite ease alternate;
+  border: 1px solid white;
+}
+
+.section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: -25%;
+  background-position: center;
+  width: 800px;
+  height: 946px;
+  z-index: -1;
+  -moz-transform: skew(0deg, -20deg);
+  -ms-transform: skew(0deg, -20deg);
+  -webkit-transform: skew(0deg, -20deg);
+  transform: skew(0deg, -20deg);
+  background: url("test01.jpg") no-repeat fixed;
+}
+
+@keyframes upNdown {
+    from {top: 0px;}
+    to {top: 800px;}
+}
+
+</style>
+    </head>
+    <body>
+      <div id="main">
+        <div class="wrapper">
+          <section class="section"></section>
+        </div>
+      </div>
+    </body>
+</html>
